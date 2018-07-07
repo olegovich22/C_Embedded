@@ -1,9 +1,11 @@
 # Reverse matrix
 
-General algorithm sound like "reverse matrix = multiplication inverse determinant and transposition matrix algebraics additions"
+General algorithm sound like *"reverse matrix = multiplication inverse determinant and transposition matrix algebraics additions"*
+
+![ALT-Gaus](https://upload.wikimedia.org/wikipedia/commons/9/9b/Carl_Friedrich_Gauss.jpg?uselang=ru)
 
 #### So my algorithm consist of
-1. Find determinant (here we have limitation because in the final formula we shoul use inverse determinant that means that it can't be zero. If determinant=0, impossible find reverse matrix)
+1. Find determinant (here we have limitation because in the final formula we shoul use inverse determinant that means that it can't be zero. **If determinant=0, impossible find reverse matrix.**)
 2. Find minor matrix
 3. Find a algebraics additions
 4. Transposition
