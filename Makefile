@@ -12,3 +12,8 @@ $(TARGET):
 	@echo Compiling...
 	$(CC) -o $(TARGET) $(SOURCE) $(CFLAGS)
 
+clean:
+	@echo Tidying things up...
+	-rm -f $(TARGET)
+
+
