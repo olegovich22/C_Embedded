@@ -1,0 +1,18 @@
+CC=gcc
+
+CFLAGS=-c
+
+all: reverse
+
+reverse: main.o reverse_matrix.o
+	$(CC) main.o reverse_matrix.o  -o reverse -lm
+
+main.o: main.c
+	$(CC) $(CFLAGS) main.c
+
+reverse_matrix.o: reverse_matrix.c
+	$(CC) $(CFLAGS) reverse_matrix.c
+
+clean:
+	rm -rf *.o reverse
+
