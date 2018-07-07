@@ -2,7 +2,7 @@
 
 General algorithm sound like *"reverse matrix = multiplication inverse determinant and transposition matrix algebraics additions"*
 
-![ALT-Gaus](http://www.calend.ru/person/392/)
+![ALT-Gaus](http://www.calend.ru/img/content_events/i0/392.jpg)
 
 #### So my algorithm consist of
 1. Find determinant (here we have limitation because in the final formula we shoul use inverse determinant that means that it can't be zero. **If determinant=0, impossible find reverse matrix.**)
