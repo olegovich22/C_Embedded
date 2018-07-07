@@ -1,4 +1,4 @@
-#Reverse matrix
+# Reverse matrix
 
 General algorithm sound like "reverse matrix = multiplication inverse determinant and transposition matrix algebraics additions"
 
