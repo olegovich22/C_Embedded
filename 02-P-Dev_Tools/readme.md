@@ -2,7 +2,7 @@
 
 General algorithm sound like "reverse matrix = multiplication inverse determinant and transposition matrix algebraics additions"
 
-So my algorithm consist of
+#### So my algorithm consist of
 1. Find determinant (here we have limitation because in the final formula we shoul use inverse determinant that means that it can't be zero. If determinant=0, impossible find reverse matrix)
 2. Find minor matrix
 3. Find a algebraics additions
