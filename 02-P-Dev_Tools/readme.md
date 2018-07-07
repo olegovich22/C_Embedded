@@ -14,3 +14,13 @@ General algorithm sound like *"reverse matrix = multiplication inverse determina
 The final big O notation is O(n^6+n^4+2n^3+5n^2+2n).
 
 More about this algorithm you can read on [this site.](http://mathprofi.ru/kak_naiti_obratnuyu_matricu.html)
+
+## Recommendation and rules for using
+
+* You should enter one or two arguments. 
+
+* First argument it is a size of matrix which you want to reverse. *Matrix size can be from 2 to 34.*
+
+* In normal mode as result  you can see only time work. If you want to see entered and reverse matrix, you should enter anything as second argument.
+
+* If smth wrong, you will see short information about error.
