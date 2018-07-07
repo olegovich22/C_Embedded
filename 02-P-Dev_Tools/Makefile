@@ -1,19 +1,19 @@
-TARGET=reverse
-SOURCE=reverse_matrix.c reverse_matrix.h main.c
-
 CC=gcc
-CFLAGS=-O2 -lm
+CFLAGS=-O2
+
+TARGET=reverse
+SOURCE=main reverse_matrix
+OBJ:=$(addsuffix .o, $(SOURCE))
 
 .PHONY: all clean
 
 all: $(TARGET)
 
-$(TARGET):
-	@echo Compiling...
-	$(CC) -o $(TARGET) $(SOURCE) $(CFLAGS)
+$(TARGET): $(OBJ)
+	$(CC) $(OBJ) $(CFLAGS) -o $(TARGET) -lm
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $<
 
 clean:
-	@echo Tidying things up...
-	-rm -f $(TARGET)
-
-
+	rm -rf *.o $(TARGET)
