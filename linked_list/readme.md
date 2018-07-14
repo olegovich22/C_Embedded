@@ -32,13 +32,15 @@ This list for using by all data type, from int till big and hard structures. But
 
 Node struct
 
-<code>
-struct list_node<br>
-{<br>
-    void *data;<br>
-    struct list_node *next;<br>
-    struct list_node *prev;<br>
+
+struct list_node
+{
+    void *data;
+    struct list_node *next;
+    struct list_node *prev;
 };
-</code>
+
+
+
 
 
