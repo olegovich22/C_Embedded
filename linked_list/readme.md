@@ -34,12 +34,13 @@
 
 ## How to use this list?
 
-1. create list
-2. create nodes
-3. fill node into list
-4. implement rule functions which/if you need
-5. now you can free use all functions you have seen above
-6. delete list after using
+**1)** Create list.
+**2)** Create nodes.
+**3)** Fill node into list.
+**4)** Implement rule functions which/if you need.
+**5)** Init your nodes using your rule function.
+**6)** Now you can free use all functions you have seen above or do anything with your list.
+**7)** Delete list after using.
 
 ## Rule functions
 
