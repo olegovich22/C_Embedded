@@ -2,6 +2,14 @@
 
 ## What can you do
 
+* <b>createList</b>
+
+* <b>deleteList</b>
+
+* <b>createNode</b>
+
+* <b>deleteNode</b>
+
 * <b>add_to_list_at_index()</b> - function for add node to list at any index from 0 to size-1.
 
 * <b>add_to_tail_list()</b> - function for add node in the end of list.
@@ -23,6 +31,15 @@
 * <b>extend()</b> - function for adding copy of another list to the end of list which we want.
 
 * <b>bubbleSort()</b> - function for sort list
+
+## How to use this list?
+
+1. create list
+2. create nodes
+3. fill node into list
+4. implement rule functions which/if you need
+5. now you can free use all functions you have seen above
+6. delete list after using
 
 ## Rule functions
 
