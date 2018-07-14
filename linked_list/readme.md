@@ -40,6 +40,53 @@ struct list_node
     struct list_node *prev;
 };
 ```
+Data struct
+```C
+struct int_struct
+{
+    int dataInt1;
+    int dataInt2;
+};
+```
+And example
+
+```C
+//compare_rule() - function for compare 2 nodes. Use for sort.
+bool compare_rule(const struct list_node *a, const struct list_node *b)
+{
+    struct int_struct *data1=a->data;
+    struct int_struct *data2=b->data;
+
+    return data1->dataInt1 > data2->dataInt1;
+}
+
+//function for initialization your structure.
+void init_rule(struct list_node *aNode, int i1, int i2)
+{
+    struct int_struct *data=aNode->data;
+
+    data->dataInt1=i1;
+    data->dataInt2=i2;
+}
+
+//function for print data from your structure.
+void print_rule(struct list_node *aNode)
+{
+    struct int_struct *data=aNode->data;
+    printf("[%d, %d]\n", data->dataInt1, data->dataInt2);
+}
+
+//function for copy nodes. Information from old copy to new Use for slice and extend operations where we need to do it.
+void copy_rule(const struct list_node *new, const struct list_node *old)
+{
+    struct int_struct *new1=new->data;
+    struct int_struct *old1=old->data;
+
+    new1->dataInt1=old1->dataInt1;
+    new1->dataInt2=old1->dataInt2;
+}
+
+```
 
 
 
