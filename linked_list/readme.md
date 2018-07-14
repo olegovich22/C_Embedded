@@ -93,11 +93,11 @@ Using this simple example you can build your own rule functions for your own har
 
 ## Traverse
 
-You can traverse list in 2 ways
+You can traverse list in 2 ways.
 
 **1)**Firstly you need init list_node variable. Then you can use loop for list.
 
-#####Example 
+##### Example 
 ```C
 struct list_node *ptr=aList->head;
     for_each_list(ptr, aList)
@@ -109,7 +109,7 @@ struct list_node *ptr=aList->head;
 
 **2)**Firstly you need declare int and list_node variable. Then you can use loop for list.
 
-#####Example 
+##### Example 
 ```C
 int i;
 struct list_node *ptr;
