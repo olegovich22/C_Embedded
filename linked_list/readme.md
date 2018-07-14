@@ -76,7 +76,8 @@ void print_rule(struct list_node *aNode)
     printf("[%d, %d]\n", data->dataInt1, data->dataInt2);
 }
 
-//function for copy nodes. Information from old copy to new Use for slice and extend operations where we need to do it.
+//function for copy nodes. 
+//Information from old copy to new Use for slice and extend operations where we need to do it.
 void copy_rule(const struct list_node *new, const struct list_node *old)
 {
     struct int_struct *new1=new->data;
@@ -86,6 +87,37 @@ void copy_rule(const struct list_node *new, const struct list_node *old)
     new1->dataInt2=old1->dataInt2;
 }
 
+```
+
+Using this simple example you can build your own rule functions for your own hard data structures.
+
+## Traverse
+
+You can traverse list in 2 ways
+
+**1)**Firstly you need init list_node variable. Then you can use loop for list.
+
+#####Example 
+```C
+struct list_node *ptr=aList->head;
+    for_each_list(ptr, aList)
+    {
+        //struct int_struct* data_from_struct=ptr->data;
+        print_rule(ptr);//print rule
+    }
+```
+
+**2)**Firstly you need declare int and list_node variable. Then you can use loop for list.
+
+#####Example 
+```C
+int i;
+struct list_node *ptr;
+    for_each_list_i(i, ptr, aList)
+    {
+        //struct int_struct* data_from_struct=ptr->data;
+        print_rule(ptr);
+    }
 ```
 
 
