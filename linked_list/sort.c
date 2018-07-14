@@ -1,7 +1,38 @@
 #include "sort.h"
 #include "list.h"
 
-void swap(struct info_list *aList, int index1, int index2)
+//declarations
+/**
+ * swap() - function for swap elements. Use in sort.
+ * @aList: list node from which we will swap
+ * @index1: index of first element in list which we will swap
+ * @index1: index of second element in list which we will swap
+ *
+ */
+void swap(struct list *aList, int index1, int index2);
+
+
+void bubbleSort(struct list *aList, bool (*cmp_func)(const struct list_node *, const struct list_node *))
+{
+    for (int theOut = aList->size - 1; theOut > 1; theOut --)
+    {
+        for (int theIn = 0; theIn < theOut; theIn ++)
+        {
+            struct list_node* node1=aList->head;
+            struct list_node* node2=aList->head;
+            set_links_at_index(node1, theIn);
+            set_links_at_index(node2, theIn+1);
+
+            if (cmp_func(node1, node2))
+            {
+                swap(aList, theIn, theIn+1);
+            }
+        }
+    }
+
+}
+
+void swap(struct list *aList, int index1, int index2)
 {
     if(index1>index2)
     {
@@ -54,25 +85,5 @@ void swap(struct info_list *aList, int index1, int index2)
         tmpNext->prev=entry1;
     }
 
-
-}
-
-void bubbleSort(struct info_list *aList, bool (*cmp_func)(const struct list_node *, const struct list_node *))
-{
-    for (int theOut = aList->size - 1; theOut > 1; theOut --)
-    {
-        for (int theIn = 0; theIn < theOut; theIn ++)
-        {
-            struct list_node* node1=aList->head;
-            struct list_node* node2=aList->head;
-            set_links_at_index(node1, theIn);
-            set_links_at_index(node2, theIn+1);
-
-            if (cmp_func(node1, node2))
-            {
-                swap(aList, theIn, theIn+1);
-            }
-        }
-    }
 
 }

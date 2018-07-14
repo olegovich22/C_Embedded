@@ -1,17 +1,17 @@
-//
-// Created by Oleg on 12.07.2018.
-//
 
 #ifndef MYLIST_SORT_H
 #define MYLIST_SORT_H
 
 #include "list.h"
+#include <stdbool.h>
 
-void swap(struct info_list *aList, int index1, int index2);
-
-void bubbleSort(struct info_list *aList, bool (*cmp_func)(const struct list_node *, const struct list_node *));
-
-
+/**
+ * bubbleSort() - function for sort list
+ * @aList: list which we will sort
+ * @cmp_func: function for compare elements. This function can wright user for any data structures
+ *
+ */
+void bubbleSort(struct list *aList, bool (*cmp_func)(const struct list_node *, const struct list_node *));
 
 
 #endif //MYLIST_SORT_H
