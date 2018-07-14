@@ -33,7 +33,7 @@ This list for using by all data type, from int till big and hard structures. But
 Node struct
 
 
-struct list_node
+struct list_node\
 {
     void *data;
     struct list_node *next;
