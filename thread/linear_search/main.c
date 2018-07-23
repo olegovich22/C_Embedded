@@ -13,14 +13,6 @@ double timespec_diff(struct timespec *stop, struct timespec *start)
 	return diff;
 }
 
- //int res=-1;
- 
- //void *thread_function(void *arg)
- //{
-	 //int tmp_res=linear_search(((struct info_for_thread *)arg)->arr, ((struct info_for_thread *)arg)->first, ((struct info_for_thread *)arg)->last, ((struct info_for_thread *)arg)->key);
-	
-	 //if(tmp_res!=-1) res=tmp_res;
-//}
 
 
 int main(int argc, char *argv[])
@@ -32,7 +24,7 @@ int main(int argc, char *argv[])
 		int *arr=malloc(size*sizeof(int));
         if(arr==NULL) {printf("NO MEMORY\n"); return 1;}		
 		fill_arr_random(arr, size);
-		int index=4;
+		int index=atoi(argv[3]);
 		int key=arr[index];
 		
 		
@@ -42,14 +34,11 @@ int main(int argc, char *argv[])
 		printf("%g\n", timespec_diff(&time_after, &time_now));
 		
 		clock_gettime(CLOCK_REALTIME, &time_now);
-	
 		int res22=linear_search_thread(arr, size, key, count_threads);
-		
 		clock_gettime(CLOCK_REALTIME, &time_after);
 		printf("%g\n", timespec_diff(&time_after, &time_now));
 		
 		printf("res: %d, arr[res]: %d, index: %d, key: %d\n", res22, arr[res22], index, key);
-		
 		
 		free(arr);
 		return 0;
